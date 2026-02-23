@@ -1,4 +1,4 @@
-# A SQL injection or SQLi is a code injection technique to access or destroy a database
+## A SQL injection or SQLi is a code injection technique to access or destroy a database
 Source : https://www.w3schools.com/sql/sql_injection.asp
 
 ## Example of SQL:
@@ -7,24 +7,24 @@ txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
 
 ## SQLi based on 1=1 is always True:
 SELECT * FROM Users WHERE UserId = 105 OR 1=1;
-2dn example:
-'''SELECT UserId, Name, Password FROM Users WHERE UserId = 105 or 1=1;'''
+**2dn example:**
+SELECT UserId, Name, Password FROM Users WHERE UserId = 105 or 1=1;'''
 
 ## SQLi based ""="" is always True:
-### Example
+**Example**
 uName = getRequestString("username");
 uPass = getRequestString("userpassword");
 sql = 'SELECT * FROM Users WHERE Name ="' + uName + '" AND Pass ="' + uPass + '"'
-### Result
+**Result**
 SELECT * FROM Users WHERE Name ="John Doe" AND Pass ="myPass"
-### SQLi
+**SQLi**
 SELECT * FROM Users WHERE Name ="" or ""="" AND Pass ="" or ""=""
-### Will return all rows from the "Users" table
+**Will return all rows from the "Users" table**
 
 ## SQLi based batched sql statements:
-### Example, return all rows from the "Users" table and then delete the "Suppliers" table
+**Example, return all rows from the "Users" table and then delete the "Suppliers" table**
 SELECT * FROM Users; DROP TABLE Suppliers
-### SQLi
+**SQLi**
 SELECT * FROM Users WHERE UserId = 105; DROP TABLE Suppliers;
 
 ## Uses of SQL parameters to protection:
