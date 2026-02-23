@@ -1,14 +1,14 @@
 # A SQL injection or SQLi is a code injection technique to access or destroy a database
 Source : https://www.w3schools.com/sql/sql_injection.asp
 
-## Example:
+## Example of SQL:
 txtUserId = getRequestString("UserId");
 txtSQL = "SELECT * FROM Users WHERE UserId = " + txtUserId;
 
 ## SQLi based on 1=1 is always True:
 SELECT * FROM Users WHERE UserId = 105 OR 1=1;
-### 2dn example:
-SELECT UserId, Name, Password FROM Users WHERE UserId = 105 or 1=1;
+2dn example:
+'''SELECT UserId, Name, Password FROM Users WHERE UserId = 105 or 1=1;'''
 
 ## SQLi based ""="" is always True:
 ### Example
