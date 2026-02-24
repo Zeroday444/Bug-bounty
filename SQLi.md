@@ -1,5 +1,6 @@
 ## A SQL injection or SQLi is a code injection technique to access or destroy a database
 Source : https://www.w3schools.com/sql/sql_injection.asp
+Labs and ressource : https://portswigger.net/web-security/sql-injection#what-is-sql-injection-sqli
 
 ## Example of SQL:
 txtUserId = getRequestString("UserId");
